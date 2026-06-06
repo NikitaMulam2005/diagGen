@@ -167,6 +167,5 @@ Ollama starts automatically as a background service after installation. The app 
 ## Known Limitations
 
 - Model may occasionally hallucinate component names despite prompt constraints — the quality check in the prompt catches most cases
-- Very niche domains (e.g. military comms protocols, proprietary chipset architectures) may produce less accurate component names since the model's training data coverage varies
 - Diagrams with more than 18 nodes may exceed `num_predict: 1200` and get truncated mid-output; increase `num_predict` if needed for complex topics
 - The sanitizer handles `-->` only; other Mermaid arrow types (`-.->`, `==>`) are excluded by design to match the sanitizer's node-resolution capability
