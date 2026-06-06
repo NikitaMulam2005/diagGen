@@ -1,4 +1,4 @@
-# AI Engineering Diagram Generator
+# AI Diagram Generator
 
 A local-first AI-powered tool that converts natural language prompts into accurate, structured Mermaid flowchart diagrams using a locally running LLM via Ollama.
 
