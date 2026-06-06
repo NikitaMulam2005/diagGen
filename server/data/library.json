@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1780760436608",
+    "title": "Generate a compiler design block diagram",
+    "desc": "Generate a compiler design block diagram",
+    "mermaidCode": "flowchart LR\n  subgraph LexicalAnalyzer[\"Lexical Analyzer\"]\n    LA1[Tokenizer]\n    LA2[Scanner]\n    LA3[Lexer Rules Engine]\n    LA1 --> LA2\n    LA2 --> LA3\n  end\n  subgraph SyntaxParser[\"Syntax Parser\"]\n    SP1[LL1 Parser]\n    SP2[Syntactic Analysis Tree Builder]\n    SP3[Error Handling Module]\n    LA3 --> SP1\n    SP1 --> SP2\n    SP2 --> SP3\n  end\n  subgraph SemanticAnalyzer[\"Semantic Analyzer\"]\n    SA1[Type Checker]\n    SA2[Scope Resolver]\n    SA3[Code Generation Rules Engine]\n    SP2 --> SA1\n    SA1 --> SA2\n    SA2 --> SA3\n  end\n  subgraph CodeGenerator[\"Code Generator\"]\n    CG1[Ast to Intermediate Representation Converter]\n    CG2[Intermediate Representation Optimizer]\n    CG3[Target Machine Code Generator]\n    SA3 --> CG1\n    CG1 --> CG2\n    CG2 --> CG3\n  end\n  LA1 --> SP1\n  SP2 --> CG1",
+    "date": "Jun 6, 2026"
+  },
+  {
+    "id": "1780760038863",
+    "title": "Generate a block diagram of GSM architec",
+    "desc": "Generate a block diagram of GSM architecture",
+    "mermaidCode": "flowchart LR\n  subgraph SG1[\"Circuit Switched Domain\"]\n    MSC[Mobile Service Control]\n    VLR[Visitor Location Register]\n    HLR[Home Location Register]\n    BSC[Bidirectional Speech Controller]\n    BTS(Base Transceiver Station)\n  end\n  subgraph SG2[\"Packet Switched Domain\"]\n    GGSN[GPRS Gateway Support Node]\n    SGSN[Serving GPRS Support Node]\n    PGW[P-Gateway]\n    SGW(S-Gateway)\n  end\n  subgraph SG3[\"Network Interface\"]\n    IWF[IP Wireless Forwarding Function]\n    MGW[Multiplexor Gateway]\n  end\n  MSC --> VLR\n  VLR --> HLR\n  BSC --> BTS\n  GGSN --> SGSN\n  SGSN --> PGW\n  PGW --> SGW\n  IWF --> GGSN\n  MGW --> BSC",
+    "date": "Jun 6, 2026"
+  }
+]
